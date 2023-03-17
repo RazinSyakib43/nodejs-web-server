@@ -3,9 +3,9 @@
 const http = require('http');
  
 const requestListener = (request, response) => {
-    response.setHeader('Content-Type', 'text/html');
-    // response.statusCode = 200;
- 
+    response.setHeader('Content-Type', 'application/json');
+    response.setHeader('X-Powered-By', 'NodeJS');
+
     const { method, url } = request;
  
     if(url === '/') {
